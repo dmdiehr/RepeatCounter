@@ -30,12 +30,22 @@ namespace RepeatCounterProject.Objects
         '?', '/'
       };
       string[] blockArray = textBlock.Split();
-
       foreach (string word in blockArray)
       {
         if (word.Trim(specialCharacters) == searchTerm)
         {
           counter++;
+        }
+        else
+        {
+          string[] subArray = word.Split(specialCharacters);
+          foreach (string subWord in subArray)
+          {
+            if (subWord.Trim(specialCharacters) == searchTerm)
+            {
+              counter++;
+            }
+          }
         }
       }
 

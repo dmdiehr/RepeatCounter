@@ -46,18 +46,18 @@ namespace RepeatCounterProject.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test this test.");
       Assert.Equal(newRepeatCounter.CountRepeats(), 2);
     }
-    // [Fact] //8
-    // public void CountRepeats_testtesthyphendrivendevelopmentcantestyoursoul_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test-driven development can test yours soul.");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
-    // [Fact] //9
-    // public void CountRepeats_testhyphendrivenisittesthyphendrivenortestdriven_1()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test-driven", "Is it test-driven or test driven? Hyphen yea or nay?");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 1);
-    // }
+    [Fact] //8
+    public void CountRepeats_testtesthyphendrivendevelopmentcantestyoursoul_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test-driven development can test yours soul.");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
+    [Fact] //9
+    public void CountRepeats_testhyphendrivenisittesthyphendrivenortestdriven_1()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test-driven", "Is it test-driven or test driven? Hyphen yea or nay?");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 1);
+    }
     [Fact] //10
     public void CountRepeats_testItshashtagtestdayexclamationpoint_3()
     {
