@@ -70,6 +70,11 @@ namespace RepeatCounterProject.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "It's ##test day! That's right, double hashtags because I love to TEST!!!!");
       Assert.Equal(newRepeatCounter.CountRepeats(), 2);
     }
-
+    [Fact]
+    public void CountRepeats_hashtagtestItstestday_1()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("#test", "It's #test day. I love test day!");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 1);
+    }
   }
 }
