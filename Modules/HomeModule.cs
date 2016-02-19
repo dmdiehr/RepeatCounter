@@ -14,8 +14,9 @@ namespace RepeatCounterProject
       };
       Post["/output"] = _ =>
       {
-
-        return View["output.cshtml"];
+        RepeatCounter newRepeatCounter = new RepeatCounter(Request.Form["searchTerm"], Request.Form["textBlock"]);
+        int result = newRepeatCounter.CountRepeats();
+        return View["output.cshtml", result];
       };
     }
   }

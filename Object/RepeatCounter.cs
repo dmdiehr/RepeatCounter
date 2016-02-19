@@ -52,7 +52,6 @@ namespace RepeatCounterProject.Objects
           }
         }
       }
-
       return counter;
     }
   }
