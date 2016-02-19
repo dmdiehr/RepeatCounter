@@ -10,18 +10,18 @@ namespace RepeatCounterProject.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "");
       Assert.Equal(newRepeatCounter.CountRepeats(), 0);
     }
-    // [Fact] //2
-    // public void CountRepeats_testtest_1()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 1);
-    // }
-    // [Fact] //3
-    // public void CountRepeats_testtestthistest_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "test this test");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
+    [Fact] //2
+    public void CountRepeats_testtest_1()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 1);
+    }
+    [Fact] //3
+    public void CountRepeats_testtestthistest_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "test this test");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
     // [Fact] //4
     // public void CountRepeats_Testtestthistest_2()
     // {
