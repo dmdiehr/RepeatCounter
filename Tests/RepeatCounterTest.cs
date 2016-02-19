@@ -58,18 +58,18 @@ namespace RepeatCounterProject.Objects
     //   RepeatCounter newRepeatCounter = new RepeatCounter("test-driven", "Is it test-driven or test driven? Hyphen yea or nay?");
     //   Assert.Equal(newRepeatCounter.CountRepeats(), 1);
     // }
-    // [Fact] //10
-    // public void CountRepeats_testItshashtagtestdayexclamationpoint_3()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "It's #test day! Follow @test for a new TEST!");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 3);
-    // }
-    // [Fact] //11
-    // public void CountRepeats_testItsdoublehashtagtestday_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "It's ##test day! That's right, double hashtags because I love to TEST!!!!");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
+    [Fact] //10
+    public void CountRepeats_testItshashtagtestdayexclamationpoint_3()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "It's #test day! Follow @test for a new TEST!");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 3);
+    }
+    [Fact] //11
+    public void CountRepeats_testItsdoublehashtagtestday_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "It's ##test day! That's right, double hashtags because I love to TEST!!!!");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
 
   }
 }

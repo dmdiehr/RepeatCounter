@@ -21,11 +21,19 @@ namespace RepeatCounterProject.Objects
       int counter = 0;
       string searchTerm = _searchTerm.ToLower();
       string textBlock = _textBlock.ToLower();
+      char[] specialCharacters =
+      {
+        '!', '@', '#', '$', '%', '^', '&',
+        '*', '(', ')', '_', '-', '+', '=',
+        '{', '}', '[', ']', '\\', '|', ':',
+        ';', '\'', '\"', '<', '>', ',', '.',
+        '?', '/'
+      };
       string[] blockArray = textBlock.Split();
 
       foreach (string word in blockArray)
       {
-        if (word == searchTerm)
+        if (word.Trim(specialCharacters) == searchTerm)
         {
           counter++;
         }
