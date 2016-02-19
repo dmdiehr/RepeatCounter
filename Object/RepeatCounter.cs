@@ -19,11 +19,13 @@ namespace RepeatCounterProject.Objects
     public int CountRepeats()
     {
       int counter = 0;
-      string[] blockArray = _textBlock.Split();
+      string searchTerm = _searchTerm.ToLower();
+      string textBlock = _textBlock.ToLower();
+      string[] blockArray = textBlock.Split();
 
       foreach (string word in blockArray)
       {
-        if (word == _searchTerm)
+        if (word == searchTerm)
         {
           counter++;
         }

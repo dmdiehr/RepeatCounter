@@ -22,30 +22,30 @@ namespace RepeatCounterProject.Objects
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "test this test");
       Assert.Equal(newRepeatCounter.CountRepeats(), 2);
     }
-    // [Fact] //4
-    // public void CountRepeats_Testtestthistest_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("Test", "test this test");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
-    // [Fact] //5
-    // public void CountRepeats_testTestthistest_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test this test");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
-    // [Fact] //6
-    // public void CountRepeats_testdontgettesty_0()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "Don't get testy");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 0);
-    // }
-    // [Fact] //7
-    // public void CountRepeats_testTesthistest_2()
-    // {
-    //   RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test this test.");
-    //   Assert.Equal(newRepeatCounter.CountRepeats(), 2);
-    // }
+    [Fact] //4
+    public void CountRepeats_Testtestthistest_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("Test", "test this test");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
+    [Fact] //5
+    public void CountRepeats_testTestthistest_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test this test");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
+    [Fact] //6
+    public void CountRepeats_testdontgettesty_0()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "Don't get testy");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 0);
+    }
+    [Fact] //7
+    public void CountRepeats_testTesthistest_2()
+    {
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "Test this test.");
+      Assert.Equal(newRepeatCounter.CountRepeats(), 2);
+    }
     // [Fact] //8
     // public void CountRepeats_testtesthyphendrivendevelopmentcantestyoursoul_2()
     // {
