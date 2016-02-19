@@ -32,7 +32,11 @@ namespace RepeatCounterProject.Objects
       string[] blockArray = textBlock.Split();
       foreach (string word in blockArray)
       {
-        if (word.Trim(specialCharacters) == searchTerm)
+        if (word == searchTerm)
+        {
+          counter++;
+        }
+        else if (word.Trim(specialCharacters) == searchTerm)
         {
           counter++;
         }
