@@ -1,0 +1,82 @@
+Repeat Counter Project Specs.
+
+General: The method with take two strings: a search term, and block of text from which to search.
+____________________________________________________________________________________________________________________
+
+Behavior (1): Should return 0, if the search term is not in the text block.
+
+	search term: "test"; text block: ""; => 0;
+
+Explanation: An empty test block should always return no results. Making it a pretty simple way to test for false positives. 
+___________________________________________________________________________________________________________________
+
+Behavior (2): Should return 1, if the search term and is in the text block once.
+
+	search term: "test"; text block: "test"; => 1;
+
+Explanation: Well, a test block that is identical to the search term is the simplest way that there can be a match.
+___________________________________________________________________________________________________________________
+
+Behavior (3): Should return the correct number of repeats if the search term is in the text block multiple times.
+
+	search term: "test"; text block "test this test"; => 2;
+
+Explanation: Two is the simplest number greater than one. It seems really silly that I have to write these explanations. I'm about 90% sure nobody is ever going to read this.
+___________________________________________________________________________________________________________________
+
+Behavior (4): Should return repeats regardless of capitalization.
+
+
+	search term: "Test"; text block: "test this test"; => 2;
+
+Explanation: Adding capitalization to the search term from a previous test seems pretty simple.
+___________________________________________________________________________________________________________________
+
+Behavior (5): Should return repeats regardless of capitalization.
+
+
+	search term: "test"; text block: "Test this test"; => 2;
+
+Explanation: Same behavior as the last test, but want to check that capitalization doesn't affect anything no matter where it is.
+___________________________________________________________________________________________________________________
+
+Behavior (6): Should not count partial words as words.
+
+	search term: "test"; text block: "Don't get testy"; => 0;
+
+Explanation: Um... like... this is the behavior we want to test... and... it's a simple test.... Seriously tired of explaining.
+__________________________________________________________________________________________________________________
+
+Behavior (7): Should be able to deal with punctuation.
+
+	search term: "test"; text block: "Test this test."; => 2;
+
+Explanation: Same test as before, only adding a period. So, pretty simple.
+__________________________________________________________________________________________________________________
+
+Behavior (8): Should be able to deal with hyphenation. This decision is arbitrary, but to my mind, it should count when the search term is part of a hyphenated word.
+
+	search term: "test"; text block: "Test-driven development can test your soul."; => 2;
+
+Explanation: Words and stuff.
+__________________________________________________________________________________________________________________
+
+Behavior (9): Should be able to deal with hyphenation. If the hyphen is in the search term, then it should only count matches that also have the hyphen.
+
+	search term: "test-driven"; text block: "Is it 'test-driven' or 'test driven'? Hyphen yea or nay?"; => 1;
+
+Explanation: Words and stuff.
+__________________________________________________________________________________________________________________
+
+Behavior (10): Should be able to deal with special characters. Again, this is an arbitrary decision, but it seems to me that it should count words even if they're attached to special characters.
+
+	search term: "test"; text block: "It's #test day! Follow @test for a new TEST!"; => 3;
+
+Explanation: Okay, I'll be honest. This might not actually be the simplest test possible. But... I'm getting really tired of writing these.
+__________________________________________________________________________________________________________________
+
+Behavior (11): Should be able to deal with multiple special characters. 
+
+	search term: "test"; text block: "It's ##test day! That's right, double hashtags because I love to TEST!!!; => 2;
+
+Explanation: Same as last test but with ####MORE!!!!
